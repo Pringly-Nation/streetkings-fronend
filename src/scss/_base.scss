@@ -1,0 +1,354 @@
+// Base
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+//background---------------
+.background{
+  opacity: 0.25;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+body {
+  padding: 0;  
+  margin: 0;
+  color: var(--base-txt-color);
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background: var(--body-bg);
+  height: 100vh;
+}
+
+
+// headings ------------
+h1,h2,h3,h5,h6 {
+  margin: 0 0 .5em;
+  color: var(--heading-color);
+}
+
+// links ---------------
+a {
+  color: var(--link-color);
+}
+
+
+// app splash screen -------
+.app-splash {
+  position: fixed;
+  background: #fff;
+  color: #777;
+  display: flex;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .app-logo {
+    width: 180px;
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+
+// helper classes ---------
+.calign {
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.6em;
+}
+
+.brand-color {
+  color: var(--brand-color);
+}
+
+// generic-entry ------------
+.generic-entry {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  margin-bottom: .5em;
+  padding: 1em;
+  background: #fff;
+}
+
+// root ---------------
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  overflow: hidden;
+}
+
+// page --------------------
+.page-content {
+  position: absolute;
+  top: var(--app-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  padding: 1em;
+  &.no-pad {
+    padding: 0;
+  }
+}
+
+.page-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// sign in + sign up pages ----------
+.signinup-box,
+.signup-box {  
+  max-width: 320px;
+  text-align: center;
+}
+
+.signinup-logo {
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+// guide page ---------------
+.guide-step {
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 600px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.car-grid{
+  display: flex;
+  flex-wrap: wrap;
+  .car-card{
+    width: 33.3%;
+    margin: 0.5em;
+  }
+}
+
+.haircut-dialog{
+  --width: 70%;
+}
+
+.haircut-dialog::part(body){
+  margin-top: -3em;
+}
+
+.haircut-dialog::part(header-actions) {
+  z-index: 1;
+}
+
+// RESPONSIVE - MOBILE -------------------
+@media all and (max-width: 768px){ 
+
+  .signinup-box {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+//cars interactivity ---------------------
+.cars{
+  padding-top: 10%;
+  margin:auto;
+  width: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.rx7, .s15, .r34{
+  width: 33%;
+  opacity: 0.2;
+}
+
+.rx7:hover, .s15:hover, .r34:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
+//home page ----------------------
+.commodore-drift{
+  width: 100%;
+  position:absolute;
+  top: -100px;
+  left: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+.hero-image-header{
+  width: 100%;
+  margin-top: 32%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px;
+
+  p{
+    font-size: xx-large;
+  }
+}
+
+.driftcloud1, .driftcloud2{
+  position: absolute;
+  width: 50%;
+  animation-name: clouddrift;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  z-index: 1;
+}
+
+.driftcloud1{
+  top: 10px;
+  right: -100px;
+}
+
+.driftcloud2{
+  top: 100px;
+  right: -20px;
+  animation-direction: alternate;
+}
+
+@keyframes clouddrift{
+  0%{transform: translateX(0px);}
+  100%{transform: translateX(60px)}
+}
+
+
+//buy page--------------------------
+.page-content h1{
+  margin: auto;
+  text-align: center;
+  background-color: rgb(86, 86, 86);
+  width: 20%;
+  opacity: 0.8;
+}
+
+//car stats page ------------------------
+.carandinformation{
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.carinformation{
+  width: 50%;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.carshowcase{
+  width: 50%;
+}
+
+//sell page -------------------------
+.sell-cards{
+  height: 80%;
+  display: flex;
+  margin: auto;
+}
+
+.card{
+  width: 25%;
+  height: 100%;
+  background-color: #777;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto
+}
+
+//garage page ------------------
+.garage-animation{
+  width: 100%;
+  text-align: center;
+}
+
+.placeholder{
+  width: 5%;
+  padding: 5px;
+  background-color: black;
+}
+
+.lights{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 10;
+}
+
+.off{
+  opacity: 0;
+  z-index:-1;
+}
+
+.garagelight{
+  width: 20%;
+  position: absolute;
+}
+
+.garage-doors{
+  width: 100%;
+  height: 115%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  overflow: hidden;
+  z-index: 1000;
+  animation: garage-zoom 0.5s 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.garage-moving{
+  top: 12%;
+  left: 15%;
+  width: 70%;
+  overflow: hidden;
+  z-index: 2;
+  margin: auto;
+  position: absolute;
+  animation: garage-open;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes garage-open{
+  0%{top:12%}
+  100%{top: -100%;}
+}
+
+@keyframes garage-zoom{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    z-index: -1;
+  }
+}
