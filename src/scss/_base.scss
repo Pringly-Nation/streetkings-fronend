@@ -145,15 +145,15 @@ a {
   }
 }
 
-.haircut-dialog{
+.car-dialog{
   --width: 70%;
 }
 
-.haircut-dialog::part(body){
+.car-dialog::part(body){
   margin-top: -3em;
 }
 
-.haircut-dialog::part(header-actions) {
+.car-dialog::part(header-actions) {
   z-index: 1;
 }
 

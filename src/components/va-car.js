@@ -27,9 +27,6 @@ customElements.define('va-cars', class Cars extends LitElement {
       image: {
         type: String
       },
-      transmission: {
-        type: String
-      },
       mileage: {
         type: String
       },
@@ -78,7 +75,6 @@ customElements.define('va-cars', class Cars extends LitElement {
                 <h1>${this.name}</h1>
                 <p>${this.description}</p>
                 <p class="price">$${this.price}</p>
-                <p class="tranmission">Tranmission: <span>${this.transmission}</span></p>
                 <p class="mileage">Mileage: <span>${this.mileage}</span></p>
 
                 <sl-button @click=${this.addFavHandler.bind(this)}>
