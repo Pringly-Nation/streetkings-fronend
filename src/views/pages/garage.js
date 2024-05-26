@@ -40,7 +40,25 @@ class GarageView {
         <div class="cars">
           ${this.favCars == null ? html`
           <sl-spinner></sl-spinner>
-        ` : html`
+          ` : html`
+          ${this.favCars.map(car => html`
+            <va-car class="car-card"
+              id="${car._id}"
+              name="${car.name}"
+              description="${car.description}"
+              price="${car.price}"
+              user="${JSON.stringify(car.user)}"
+              image="${car.image}"
+              transmission="${car.transmission}"
+              mileage="${car.mileage}"
+            >        
+            </va-car>
+
+          `)}
+        `}
+        ${this.favCars == null ? html`
+          <sl-spinner></sl-spinner>
+          ` : html`
           ${this.favCars.map(car => html`
             <va-car class="car-card"
               id="${car._id}"

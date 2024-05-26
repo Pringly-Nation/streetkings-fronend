@@ -123,5 +123,4 @@ customElements.define('va-cars', class Cars extends LitElement {
     </sl-card>
     `
   }
-  
 })

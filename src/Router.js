@@ -6,10 +6,6 @@ import signupView from './views/pages/signup'
 import profileView from './views/pages/profile'
 import editProfileView from './views/pages/editProfile'
 import guideView from './views/pages/guide'
-import hairdressersView from './views/pages/hairdressers'
-import haircutsView from './views/pages/haircuts'
-import favHaircutsView from './views/pages/favhaircuts'
-import newHaircutView from './views/pages/newhaircut'
 import buyView from './views/pages/buy'
 import sellView from './views/pages/sell'
 import garageView from './views/pages/garage'
@@ -24,10 +20,6 @@ const routes = {
 	'/profile': profileView,
 	'/editProfile': editProfileView,
 	'/guide': guideView,
-	'/hairdressers': hairdressersView,
-	'/haircuts': haircutsView,
-	'/favhaircuts': favHaircutsView,
-	'/newhaircut': newHaircutView,
 	'/buy': buyView,
 	'/sell': sellView,
 	'/garage': garageView,
