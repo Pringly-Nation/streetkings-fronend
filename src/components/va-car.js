@@ -5,7 +5,7 @@ import App from './../App'
 import UserAPI from './../UserAPI'
 import Toast from './../Toast'
 
-customElements.define('va-cars', class Cars extends LitElement {
+customElements.define('va-cars', class Car extends LitElement {
   constructor(){
     super()    
   }

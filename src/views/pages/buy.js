@@ -40,10 +40,10 @@ class BuyView {
                 id="${car._id}"
                 name="${car.name}"
                 description="${car.description}"
-                price="${this.car.price}"
+                price="${car.price}"
                 user="${JSON.stringify(car.user)}"
-                image="${this.car.image}"
-                mileage="${this.car.mileage}"
+                image="${car.image}"
+                mileage="${car.mileage}"
               >        
               </va-car>
               `)}
