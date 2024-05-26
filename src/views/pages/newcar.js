@@ -68,8 +68,6 @@ class newCarView {
           <div class="input-group">
             <sl-textarea name="mileage" rows="3" placeholder="Mileage"></sl-textarea>
           </div>
-       
-          </div>
           <sl-button variant="primary" type="submit" class="submit-btn">Add Car</sl-button>
         </form>
         
