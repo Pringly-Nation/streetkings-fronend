@@ -8,7 +8,7 @@ import CarAPI from './../../CarAPI'
 class BuyView {
   init(){
     document.title = 'Buy'   
-    this.getCars = null 
+    this.cars = null 
     this.render()    
     Utils.pageIntroAnim()
     this.getCars()
@@ -30,26 +30,25 @@ class BuyView {
       <div class="page-content">        
         <h1>Spotlight Cars</h1>
         <div class="cars-grid">
-        <va-car class="car-card"
-        ${this.cars == null ? html`
-          <sl-spinner></sl-spinner>
-          `:html`
-          ${this.cars.map(car => html`
-              id="${car._id}"
-              name="${car.name}"
-              description="${car.description}"
-              price="${this.car.price}"
-              user="${JSON.stringify(car.user)}"
-              image="${this.car.image}"
-              transmission="${this.car.transmission}"
-              mileage="${this.car.mileage}"
-            >        
-            </va-car>
-        </div>
-      
-      </div> 
-      `)}
-    `}     
+          
+          ${this.cars == null ? html`
+            <sl-spinner></sl-spinner>
+            `:html`
+            ${this.cars.map(car => html`
+
+               <va-car class="car-card"
+                id="${car._id}"
+                name="${car.name}"
+                description="${car.description}"
+                price="${this.car.price}"
+                user="${JSON.stringify(car.user)}"
+                image="${this.car.image}"
+                mileage="${this.car.mileage}"
+              >        
+              </va-car>
+              `)}
+            `}   
+          </div>   
     `
     render(template, App.rootEl)
   }
