@@ -30,7 +30,6 @@ class BuyView {
       <div class="page-content">        
         <h1>Spotlight Cars</h1>
         <div class="cars-grid">
-          
           ${this.cars == null ? html`
             <sl-spinner></sl-spinner>
             `:html`
@@ -46,9 +45,10 @@ class BuyView {
                 mileage="${car.mileage}"
               >        
               </va-car>
-              `)}
-            `}   
-          </div>   
+
+                `)}
+              `}   
+              </div>   
     `
     render(template, App.rootEl)
   }

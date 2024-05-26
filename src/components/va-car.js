@@ -5,7 +5,7 @@ import App from './../App'
 import UserAPI from './../UserAPI'
 import Toast from './../Toast'
 
-customElements.define('va-cars', class Car extends LitElement {
+customElements.define('va-cars', class Cars extends LitElement {
   constructor(){
     super()    
   }
@@ -98,7 +98,7 @@ customElements.define('va-cars', class Car extends LitElement {
   async addFavHandler(){    //how to add favourites button
     try {
       await UserAPI.addFavCar(this.id)
-      Toast.show('Car added to wishlsit')
+      Toast.show('Car added to wishlist')
     }catch(err){
       Toast.show(err, 'error')
     }
