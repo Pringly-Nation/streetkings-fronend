@@ -32,31 +32,13 @@ class GarageView {
           <img class="garage-doors" src="./images/garage/garage-doors.png">
           <img class="garage-moving" src="./images/garage/garage-moving.png">
         </div>
-        <button @click=${turnOnLights} class="placeholder">placeholder</div>
-        <!--------<div id="dark" class="lights"></div>---->
+        <button @click=${turnOnLights} class="lightswitch"></button>
+        <!---------<div id="dark" class="lights"></div>-->
         <p>Your Garage</p>
         <img class="garagelight" src="./images/garage/garagelight.png">
 
         <div class="cars">
           ${this.favCars == null ? html`
-          <sl-spinner></sl-spinner>
-          ` : html`
-          ${this.favCars.map(car => html`
-            <va-car class="car-card"
-              id="${car._id}"
-              name="${car.name}"
-              description="${car.description}"
-              price="${car.price}"
-              user="${JSON.stringify(car.user)}"
-              image="${car.image}"
-              transmission="${car.transmission}"
-              mileage="${car.mileage}"
-            >        
-            </va-car>
-
-          `)}
-        `}
-        ${this.favCars == null ? html`
           <sl-spinner></sl-spinner>
           ` : html`
           ${this.favCars.map(car => html`
