@@ -7,7 +7,6 @@ import profileView from './views/pages/profile'
 import editProfileView from './views/pages/editProfile'
 import guideView from './views/pages/guide'
 import buyView from './views/pages/buy'
-import sellView from './views/pages/sell'
 import garageView from './views/pages/garage'
 import newCarView from './views/pages/newcar'
 
@@ -21,7 +20,6 @@ const routes = {
 	'/editProfile': editProfileView,
 	'/guide': guideView,
 	'/buy': buyView,
-	'/sell': sellView,
 	'/garage': garageView,
 	'/newcar': newCarView
 	

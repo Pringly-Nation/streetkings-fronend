@@ -33,9 +33,9 @@ class GarageView {
           <img class="garage-moving" src="./images/garage/garage-moving.png">
         </div>
         <button @click=${turnOnLights} class="lightswitch"></button>
-        <!---------<div id="dark" class="lights"></div>-->
-        <p>Your Garage</p>
-        <img class="garagelight" src="./images/garage/garagelight.png">
+        <div id="dark" class="lights"></div>
+        
+        <img class="garagelight" src="./images/garage/garagelight.png" >
 
         <div class="cars">
           ${this.favCars == null ? html`
