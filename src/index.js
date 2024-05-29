@@ -8,7 +8,7 @@ setBasePath('/')
 
 // components (custom web components)
 import './components/va-app-header'
-import './components/va-car.js'
+import './components/va-car'
 
 // styles
 import './scss/master.scss'

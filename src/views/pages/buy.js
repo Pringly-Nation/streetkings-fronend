@@ -45,7 +45,6 @@ class BuyView {
                 mileage="${car.mileage}"
               >        
               </va-car>
-
                 `)}
               `}   
               </div>   
