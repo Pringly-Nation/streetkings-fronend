@@ -34,12 +34,11 @@ class BuyView {
             <sl-spinner></sl-spinner>
             `:html`
             ${this.cars.map(car => html`
-
                <va-car class="car-card"
                 id="${car._id}"
                 name="${car.name}"
-                description="${car.description}"
                 price="${car.price}"
+                colour="${car.colour}"
                 user="${JSON.stringify(car.user)}"
                 image="${car.image}"
                 mileage="${car.mileage}"

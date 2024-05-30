@@ -191,7 +191,6 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         ${this.user.accessLevel == 2 ? html`<a href="/newcar" @click="${this.menuClick}">Add Car</a>`
         : ``}   
         <a href="/buy" @click="${this.menuClick}">Buy</a>
-        <a href="/sell" @click="${this.menuClick}">Sell</a>
         <a href="/garage" @click="${this.menuClick}">Garage</a>
         <a href="/profile" @click="${this.menuClick}">Profile</a>
         <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>

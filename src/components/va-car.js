@@ -18,6 +18,9 @@ customElements.define('va-cars', class Cars extends LitElement {
       name: {
         type: String
       },  
+      colour:{
+        type: String
+      },
       price: {
         type: String
       },
@@ -25,6 +28,9 @@ customElements.define('va-cars', class Cars extends LitElement {
         type: Object
       },
       image: {
+        type: String
+      },
+      driveTrain: {
         type: String
       },
       mileage: {
@@ -73,7 +79,7 @@ customElements.define('va-cars', class Cars extends LitElement {
             </div>
             <div class="content">
                 <h1>${this.name}</h1>
-                <p>${this.description}</p>
+                <p class="colour">${this.colour}</p>
                 <p class="price">$${this.price}</p>
                 <p class="mileage">Mileage: <span>${this.mileage}</span></p>
 

@@ -58,12 +58,15 @@ class newCarView {
               <span slot="prefix">$</span>
             </sl-input>
           </div>
+          <div class="input-group">
+            <sl-textarea name="colour" rows="3" placeholder="Colour"></sl-textarea>
+          </div>
           <div class="input-group" style="margin-bottom: 2em;">
             <label>Image</label><br>
             <input type="file" name="image" />              
           </div>
           <div class="input-group">
-            <sl-textarea name="tranmission" rows="3" placeholder="Transmission"></sl-textarea>
+            <sl-textarea name="drivetrain" rows="3" placeholder="Drive train"></sl-textarea>
           </div>
           <div class="input-group">
             <sl-textarea name="mileage" rows="3" placeholder="Mileage"></sl-textarea>
