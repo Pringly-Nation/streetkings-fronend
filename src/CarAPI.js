@@ -43,7 +43,7 @@ class CarAPI {
       const err = await response.json()
       if(err) console.log(err)
       // throw error (exit this function)      
-      throw new Error('Problem getting car')
+      throw new Error('Problem getting cars')
     }
     
     // convert response payload into json - store as data

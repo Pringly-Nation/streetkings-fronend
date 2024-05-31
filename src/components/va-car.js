@@ -18,10 +18,10 @@ customElements.define('va-cars', class Cars extends LitElement {
       name: {
         type: String
       },  
-      colour:{
+      price: {
         type: String
       },
-      price: {
+      colour:{
         type: String
       },
       user: {

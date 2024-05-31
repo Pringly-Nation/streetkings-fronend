@@ -17,7 +17,7 @@ class HomeView {
       <va-app-header title="Home" user=${JSON.stringify(Auth.currentUser)}></va-app-header>
       
       <div class="page-content">
-        <img class="commodore-drift" src="/images/holden-commodore-drift.png">
+        <img class="commodore-drift" src="/images/holden-drift.png">
         <img class="driftcloud1" src="./images/smoke.png">
         <img class="driftcloud2" src="./images/smoke.png">
         <div class="hero-image-header">
