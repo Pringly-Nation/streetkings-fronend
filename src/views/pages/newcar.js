@@ -66,9 +66,6 @@ class newCarView {
             <input type="file" name="image" />              
           </div>
           <div class="input-group">
-            <sl-textarea name="drivetrain" rows="3" placeholder="Drive train"></sl-textarea>
-          </div>
-          <div class="input-group">
             <sl-textarea name="mileage" rows="3" placeholder="Mileage"></sl-textarea>
           </div>
           <sl-button variant="primary" type="submit" class="submit-btn">Add Car</sl-button>
