@@ -72,7 +72,7 @@ class UserAPI {
     return data
   }
   
-  async addFavCars(carId){
+  async addFavCar(carId){
     // validate
     if(!carId) return
   
@@ -89,7 +89,7 @@ class UserAPI {
       const err = await response.json()
       if(err) console.log(err)
       // throw error (exit this function)      
-      throw new Error('Problem adding car to wishlist')
+      throw new Error('Problem adding car to garage')
     }
     
     // convert response payload into json - store as data
