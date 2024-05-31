@@ -72,7 +72,7 @@ class UserAPI {
     return data
   }
   
-  async addFavCar(carId){
+  async addFavCars(carId){
     // validate
     if(!carId) return
   

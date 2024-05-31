@@ -46,7 +46,6 @@ class GarageView {
           ${this.favCars.map(car => html`
           <va-car class="car-card"
                 id="${car._id}"
-                name="${car.name}"
                 price="${car.price}"
                 colour="${car.colour}"
                 user="${JSON.stringify(car.user)}"
