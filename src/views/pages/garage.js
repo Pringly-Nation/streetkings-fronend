@@ -3,6 +3,8 @@ import {html, render } from 'lit'
 import {gotoRoute, anchorRoute} from './../../Router'
 import Auth from './../../Auth'
 import Utils from './../../Utils'
+import Toast from './../../Toast'
+import UserAPI from './../../UserAPI'
 
 class GarageView {
   init(){
@@ -37,7 +39,7 @@ class GarageView {
         
         <img class="garagelight" src="./images/garage/garagelight.png" >
 
-        <div class="cars">
+        <div class="cars-grid">
           ${this.favCars == null ? html`
           <sl-spinner></sl-spinner>
           ` : html`
@@ -49,7 +51,6 @@ class GarageView {
                 colour="${car.colour}"
                 user="${JSON.stringify(car.user)}"
                 image="${car.image}"
-                driveTrain="${car.driveTrain}"
                 mileage="${car.mileage}"
               >        
               </va-car>

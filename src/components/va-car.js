@@ -40,10 +40,6 @@ customElements.define('va-car', class Car extends LitElement {
     super.firstUpdated()
   }
 
-  testHandler(){
-    alert("test")
-  }
-
    async moreInfoHandler(){ // very important in adding the more information page in garage
     //new sl-dialog
     const dialogEl = document.createElement('sl-dialog')
@@ -127,11 +123,6 @@ customElements.define('va-car', class Car extends LitElement {
         <sl-button @click=${this.moreInfoHandler.bind(this)}>More Info</sl-button>
         <sl-icon-button name="heart-fill" label="Add to Wishlist" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
     </sl-card>
-    <div class="wrap">
-                  <h2>${this.title}<h2>
-                    <slot></slot>
-                    <sl-button @click=${this.testHandler}>Test</sl-button>
-            </div>
     `
   }
 })
