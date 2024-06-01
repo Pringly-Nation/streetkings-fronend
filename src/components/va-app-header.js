@@ -169,7 +169,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <nav class="app-top-nav">
         <a href="/" @click="${anchorRoute}">Home</a>   
         ${this.user.accessLevel == 2 ? html`<a href="/newcar" @click="${anchorRoute}">Add Car</a>`
-        : ``}   
+        : html `<a href="/cart" @click="${this.menuClick}">Your Cart</a>`}   
 
         <sl-dropdown>
           <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">
@@ -189,7 +189,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <nav class="app-side-menu-items">
         <a href="/" @click="${this.menuClick}">Home</a> <!--how to do conditional code for the garage and wishlist-->
         ${this.user.accessLevel == 2 ? html`<a href="/newcar" @click="${this.menuClick}">Add Car</a>`
-        : ``}   
+        : html `<a href="/cart" @click="${this.menuClick}">Your Cart</a>`}   
         <a href="/buy" @click="${this.menuClick}">Buy</a>
         <a href="/garage" @click="${this.menuClick}">Garage</a>
         <a href="/profile" @click="${this.menuClick}">Profile</a>

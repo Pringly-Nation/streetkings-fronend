@@ -81,8 +81,8 @@ customElements.define('va-car', class Cars extends LitElement {
                 <p class="mileage">Mileage: <span>${this.mileage}</span></p>
 
                 <sl-button @click=${this.addFavHandler.bind(this)}>
-                <sl-icon slot="prefix" name="heart-fill"></sl-icon>
-                Add to Wishlist
+                <sl-icon slot="prefix" name="car-front"></sl-icon>
+                Add to Garage
                 </sl-button>
         </div>
     `
@@ -100,7 +100,7 @@ customElements.define('va-car', class Cars extends LitElement {
   async addFavHandler(){    //how to add favourites button
     try {
       await UserAPI.addFavCar(this.id)
-      Toast.show('Car added to wishlist')
+      Toast.show('Car added to Garage')
     }catch(err){
       Toast.show(err, 'error')
     }
@@ -121,7 +121,7 @@ customElements.define('va-car', class Cars extends LitElement {
         <h3>$${this.price}</h3>
         <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
         <sl-button @click=${this.moreInfoHandler.bind(this)}>More Info</sl-button>
-        <sl-icon-button name="heart-fill" label="Add to Wishlist" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
+        <sl-icon-button name="car-front" label="Add to Garage" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
     </sl-card>
     `
   }
