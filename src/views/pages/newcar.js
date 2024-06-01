@@ -55,7 +55,7 @@ class newCarView {
           </div>
           <div class="input-group">              
             <sl-input name="price" type="text" placeholder="Price" required>
-              <span slot="prefix">$</span>
+              <span slot="prefix">$</span><style>span{color:black}</style>
             </sl-input>
           </div>
           <div class="input-group">

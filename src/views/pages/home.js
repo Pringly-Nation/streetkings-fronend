@@ -18,8 +18,8 @@ class HomeView {
       
       <div class="page-content">
         <img class="commodore-drift" src="/images/holden-drift.png">
-        <img class="driftcloud1" src="./images/smoke.png">
-        <img class="driftcloud2" src="./images/smoke.png">
+        <img class="driftcloud1" src="./images/smoke-anim.png">
+        <img class="driftcloud2" src="./images/smoke-anim.png">
         <div class="hero-image-header">
           <p> Featured Cars </p>
           <p> V8 Holden Commodore </p>

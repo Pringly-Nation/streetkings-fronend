@@ -53,7 +53,7 @@ class GarageView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-            </va-car>
+              </va-car>
           `)}
         `}
         </div>

@@ -138,6 +138,7 @@ a {
 .cars-grid{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
   .car-card{
     width: 33.3%;
     margin: 0.5em;
@@ -187,25 +188,6 @@ a {
     width: 90%;
     max-width: none;
   }
-}
-
-//cars interactivity ---------------------
-.cars{
-  padding-top: 10%;
-  margin:auto;
-  width: 100%;
-  display: flex;
-  z-index: -1;
-}
-
-.rx7, .s15, .r34{
-  width: 33%;
-  opacity: 0.2;
-}
-
-.rx7:hover, .s15:hover, .r34:hover{
-  opacity: 1;
-  transition: 0.5s;
 }
 
 //home page ----------------------
@@ -265,25 +247,13 @@ a {
   opacity: 0.8;
 }
 
+
+
 //car stats page ------------------------
-.carandinformation{
-  width: 95%;
+.page-form{
   margin: auto;
-  display: flex;
-}
-
-.carinformation{
-  width: 50%;
-  border-style: solid;
-  border-color: #fff;
-  border-width: 2px;
   text-align: center;
-  vertical-align: middle;
-  margin: auto;
-}
-
-.carshowcase{
-  width: 50%;
+  padding-top: 40px;
 }
 
 //garage page ------------------
