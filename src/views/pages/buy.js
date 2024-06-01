@@ -35,6 +35,7 @@ class BuyView {
             `:html`
             ${this.cars.map(car => html`
                <va-car class="car-card"
+                name="${car.name}"
                 id="${car._id}"
                 price="${car.price}"
                 colour="${car.colour}"

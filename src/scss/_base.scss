@@ -31,7 +31,7 @@ body {
 // headings ------------
 h1,h2,h3,h5,h6 {
   margin: 0 0 .5em;
-  color: var(--heading-color);
+  color: white;
 }
 
 // links ---------------
@@ -156,8 +156,10 @@ a {
   h3{
     font-weight: lighter;
   }
+  h2{
+    color: white;
+  }
 }
-
 .car-card:hover{
   opacity: 1;
 }
@@ -168,6 +170,10 @@ a {
 
 .car-dialog::part(body){
   margin-top: -3em;
+  background-color: black;
+}
+.car-dialog::part(header){
+  background-color: black;
 }
 
 .car-dialog::part(header-actions) {
@@ -201,8 +207,6 @@ a {
   opacity: 1;
   transition: 0.5s;
 }
-
-
 
 //home page ----------------------
 .commodore-drift{
@@ -280,22 +284,6 @@ a {
 
 .carshowcase{
   width: 50%;
-}
-
-//sell page -------------------------
-.sell-cards{
-  height: 80%;
-  display: flex;
-  margin: auto;
-}
-
-.card{
-  width: 25%;
-  height: 100%;
-  background-color: #777;
-  border-radius: 10px;
-  padding: 10px;
-  margin: auto
 }
 
 //garage page ------------------

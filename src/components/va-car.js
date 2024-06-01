@@ -69,6 +69,9 @@ customElements.define('va-car', class Cars extends LitElement {
                 font-size: 1.5em;
                 color: var(--brand-color)
             }
+            .card_body::part(body){
+              background-color: black;
+            }
         </style>
         <div class="wrap">
             <div class="image">
@@ -108,7 +111,7 @@ customElements.define('va-car', class Cars extends LitElement {
 
   async addCartHandler(){    //how to add favourites button
     try {
-      await UserAPI.addCarToCart(this.id)
+      await UserAPI.addCartCars(this.id)
       Toast.show('Car added to Cart')
     }catch(err){
       Toast.show(err, 'error')
@@ -123,10 +126,16 @@ customElements.define('va-car', class Cars extends LitElement {
             font-style: italic;
             opacity: 0.8;
         }
+        .car-card::part(base){
+          background-color: black;
+        }
+        .car-card::part(base){
+          background-color: black;
+        }
     </style>
-    <sl-card>
+    <sl-card class="car-card">
         <img slot="image" src="${App.apiBase}/images/${this.image}" />
-        <h2>${this.name}</h2>
+        <h3>${this.name}</h3>
         <h3>$${this.price}</h3>
         <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
         <sl-button @click=${this.moreInfoHandler.bind(this)}>More Info</sl-button>

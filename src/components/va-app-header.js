@@ -185,7 +185,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
     </header>
 
     <sl-drawer class="app-side-menu" placement="start" class="drawer">
-      <img class="app-side-menu-logo" src="/images/logo.svg">
+      <img class="app-side-menu-logo" src="/images/street-kings-logo.png">
       <nav class="app-side-menu-items">
         <a href="/" @click="${this.menuClick}">Home</a> <!--how to do conditional code for the garage and wishlist-->
         ${this.user.accessLevel == 2 ? html`<a href="/newcar" @click="${this.menuClick}">Add Car</a>`

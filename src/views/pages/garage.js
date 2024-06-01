@@ -44,7 +44,8 @@ class GarageView {
           <sl-spinner></sl-spinner>
           ` : html`
           ${this.favCars.map(car => html`
-          <va-car class="car-card"
+            <va-car class="car-card"
+                name="${car.name}"
                 id="${car._id}"
                 price="${car.price}"
                 colour="${car.colour}"
@@ -52,7 +53,7 @@ class GarageView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-              </va-car>
+            </va-car>
           `)}
         `}
         </div>
