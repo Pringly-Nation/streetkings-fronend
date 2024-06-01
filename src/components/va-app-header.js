@@ -116,13 +116,17 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         text-decoration: none;
         color: #fff;
       }
-      
-      .app-side-menu-items a {
+
+
+      .app-side-menu-items{
+        margin-top: 1em;
+        a {
         display: block;
         padding: .5em;
         text-decoration: none;
         font-size: 1.3em;
         color: #333;
+      }
       }
 
       .app-side-menu-logo {

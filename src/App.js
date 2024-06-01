@@ -26,4 +26,19 @@ class App {
   }
 }
 
+// create a new HTML link element
+let link = document.createElement('link');
+link.rel = 'icon';
+link.type = 'image/png';
+link.href = './images/streetkings-logo';
+
+// remove any existing favicon
+var existingLink = document.querySelector('link[rel="icon"]');
+if (existingLink) {
+document.head.removeChild(existingLink);
+}
+
+// add the new favicon
+document.head.appendChild(link);
+
 export default new App()
