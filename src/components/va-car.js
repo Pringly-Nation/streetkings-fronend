@@ -105,6 +105,15 @@ customElements.define('va-car', class Cars extends LitElement {
       Toast.show(err, 'error')
     }
   }
+
+  async addCartHandler(){    //how to add favourites button
+    try {
+      await UserAPI.addCarToCart(this.id)
+      Toast.show('Car added to Cart')
+    }catch(err){
+      Toast.show(err, 'error')
+    }
+  }
   
   render(){    
     return html`
@@ -122,6 +131,7 @@ customElements.define('va-car', class Cars extends LitElement {
         <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
         <sl-button @click=${this.moreInfoHandler.bind(this)}>More Info</sl-button>
         <sl-icon-button name="car-front" label="Add to Garage" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
+        <sl-icon-button name="cart2" label="Add to Cart" @click=${this.addCartHandler.bind(this)}></sl-icon-button>
     </sl-card>
     `
   }

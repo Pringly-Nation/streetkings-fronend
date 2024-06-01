@@ -169,7 +169,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <nav class="app-top-nav">
         <a href="/" @click="${anchorRoute}">Home</a>   
         ${this.user.accessLevel == 2 ? html`<a href="/newcar" @click="${anchorRoute}">Add Car</a>`
-        : html `<a href="/cart" @click="${this.menuClick}">Your Cart</a>`}   
+        : html `<a href="/cart" @click="${anchorRoute}">Your Cart</a>`}   
 
         <sl-dropdown>
           <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">

@@ -9,6 +9,7 @@ import guideView from './views/pages/guide'
 import buyView from './views/pages/buy'
 import garageView from './views/pages/garage'
 import newCarView from './views/pages/newcar'
+import cartView from './views/pages/cart'
 
 // define routes
 const routes = {
@@ -21,7 +22,8 @@ const routes = {
 	'/guide': guideView,
 	'/buy': buyView,
 	'/garage': garageView,
-	'/newcar': newCarView
+	'/newcar': newCarView,
+	'/cart': cartView,
 	
 	
 }
