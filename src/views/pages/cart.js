@@ -9,7 +9,7 @@ import UserAPI from './../../UserAPI'
 class CartView {
   init(){
     document.title = 'Cart'   
-    this.cartCars = null 
+    this.cartedCars = null 
     this.render()    
     Utils.pageIntroAnim()
     this.getCartCars()
@@ -18,8 +18,8 @@ class CartView {
   async getCartCars(){
     try {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id)
-      this.cartCars = currentUser.cartCars
-      console.log(this.cartCars)
+      this.cartedCars = currentUser.cartCars
+      console.log(this.cartedCars)
       this.render()
     }catch(err){
       Toast.show(err, 'error')
@@ -31,10 +31,10 @@ class CartView {
       <va-app-header title="Your Cart" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
         <div class="cars-grid">
-          ${this.cartCars == null ? html`
+          ${this.cartedCars == null ? html`
           <sl-spinner></sl-spinner>
           ` : html`
-          ${this.cartCars.map(car => html`
+          ${this.cartedCars.map(car => html`
             <va-car class="car-card"
                 name="${car.name}"
                 id="${car._id}"

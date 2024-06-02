@@ -54,10 +54,12 @@ class GarageView {
                 mileage="${car.mileage}"
               >        
               </va-car>
+              <img class="background" src="./images/background.png">
           `)}
         `}
+        
         </div>
-        <img class="background" src="./images/background.png">
+        
       </div>   
     `
     render(template, App.rootEl)
