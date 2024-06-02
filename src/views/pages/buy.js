@@ -31,13 +31,11 @@ class BuyView {
       const mileageRangeEnd = match.split('-')[1]
       filteredCars = this.cars.filter(car => car.mileage <= mileageRangeStart && car.mileage <= mileageRangeEnd)
     }
-
     //colour
     if(field == 'colour'){
       filteredCars = this.cars.filter(car => car.colour == match)
 
     }
-  
     //price
     if(field == 'price'){
       // get priceRangeStart 
@@ -89,7 +87,9 @@ class BuyView {
           display:flex;
           align-items: center;
           position:relative;
-          z-index: 1
+          z-index: 1;
+          margin-top: 1em;
+          justify-content: center;
         }
 
         .filter-menu > div{
@@ -109,9 +109,9 @@ class BuyView {
           </div>  
           <div>
           <strong>Colour</strong>
-            <sl-button class="filter-btn" size="small" data-field="gender" data-match="m" @click=${this.handleFilterBtn.bind(this)}>Blue</sl-button>
-            <sl-button class="filter-btn" size="small" data-field="gender" data-match="f" @click=${this.handleFilterBtn.bind(this)}>White</sl-button>
-            <sl-button class="filter-btn" size="small" data-field="gender" data-match="u" @click=${this.handleFilterBtn.bind(this)}>Red</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="colour" data-match="Blue" @click=${this.handleFilterBtn.bind(this)}>Blue</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="colour" data-match="White" @click=${this.handleFilterBtn.bind(this)}>White</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="colour" data-match="Red" @click=${this.handleFilterBtn.bind(this)}>Red</sl-button>
           </div>
           <div>
             <strong>Price</strong>
@@ -121,9 +121,9 @@ class BuyView {
           </div>
           <div>
             <strong>Mileage</strong>
-            <sl-button class="filter-btn" size="small" data-field="price" data-match="10000-20000" @click=${this.handleFilterBtn.bind(this)}>10000-20000 km</sl-button>
-            <sl-button class="filter-btn" size="small" data-field="price" data-match="20000-30000" @click=${this.handleFilterBtn.bind(this)}>20000-30000 km</sl-button>
-            <sl-button class="filter-btn" size="small" data-field="price" data-match="30000-40000" @click=${this.handleFilterBtn.bind(this)}>30000-40000 km</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="mileage" data-match="10000-20000" @click=${this.handleFilterBtn.bind(this)}>10000-20000 km</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="mileage" data-match="20000-30000" @click=${this.handleFilterBtn.bind(this)}>20000-30000 km</sl-button>
+            <sl-button class="filter-btn" size="small" data-field="mileage" data-match="30000-40000" @click=${this.handleFilterBtn.bind(this)}>30000-40000 km</sl-button>
           </div>
           <div>
             <sl-button class="filter-btn" size="small" @click=${this.clearFilters.bind(this)}>Clear Filters</sl-button>

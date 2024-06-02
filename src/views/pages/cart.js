@@ -35,7 +35,7 @@ class CartView {
           <sl-spinner></sl-spinner>
           ` : html`
           ${this.cartedCars.map(car => html`
-            <va-car class="car-card"
+            <va-garagecars class="car-card"
                 name="${car.name}"
                 id="${car._id}"
                 price="${car.price}"
@@ -44,7 +44,7 @@ class CartView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-              </va-car>
+              </va-garagecars>
           `)}
         `}
       </div>      
