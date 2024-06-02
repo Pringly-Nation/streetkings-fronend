@@ -105,7 +105,7 @@ class UserAPI {
     if(!carId) return
   
     // fetch the json data
-    const response = await fetch(`${App.apiBase}/user/addCartCars`, {
+    const response = await fetch(`${App.apiBase}/user/addCartCar`, {
       method: "PUT",
       headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
       body: JSON.stringify({carId: carId})

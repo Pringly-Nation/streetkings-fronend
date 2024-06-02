@@ -138,7 +138,7 @@ customElements.define('va-car', class Cars extends LitElement {
         <h3>${this.name}</h3>
         <h3>$${this.price}</h3>
         <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
-        <sl-button @click=${this.moreInfoHandler.bind(this)}>More Info</sl-button>
+        <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
         <sl-icon-button name="car-front" label="Add to Garage" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
         <sl-icon-button name="cart2" label="Add to Cart" @click=${this.addCartHandler.bind(this)}></sl-icon-button>
     </sl-card>

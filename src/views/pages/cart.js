@@ -3,6 +3,7 @@ import {html, render } from 'lit'
 import {gotoRoute, anchorRoute} from './../../Router'
 import Auth from './../../Auth'
 import Utils from './../../Utils'
+import Toast from './../../Toast'
 import UserAPI from './../../UserAPI'
 
 class CartView {
@@ -29,12 +30,11 @@ class CartView {
     const template = html`
       <va-app-header title="Your Cart" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
-        <h1>Your Cart</h1>
         <div class="cars-grid">
           ${this.cartCars == null ? html`
           <sl-spinner></sl-spinner>
           ` : html`
-          ${this.favCars.map(car => html`
+          ${this.cartCars.map(car => html`
             <va-car class="car-card"
                 name="${car.name}"
                 id="${car._id}"
@@ -47,7 +47,6 @@ class CartView {
               </va-car>
           `)}
         `}
-        
       </div>      
     `
     render(template, App.rootEl)
