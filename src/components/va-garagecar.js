@@ -5,7 +5,7 @@ import App from './../App'
 import UserAPI from './../UserAPI'
 import Toast from './../Toast'
 
-customElements.define('va-garagecars', class Cars extends LitElement {
+customElements.define('va-garagecar', class Cars extends LitElement {
   constructor(){
     super()    
   }
@@ -43,7 +43,7 @@ customElements.define('va-garagecars', class Cars extends LitElement {
   async removeGarageCarHandler(){    //how to add favourites button
     try {
       await UserAPI.removeGarageCar(this.id)
-      Toast.show('Car removed to Garage')
+      Toast.show('Car removed from Garage')
     }catch(err){
       Toast.show(err, 'error')
     }

@@ -111,7 +111,7 @@ customElements.define('va-car', class Cars extends LitElement {
 
   async addCartHandler(){    //how to add favourites button
     try {
-      await UserAPI.addCartCars(this.id)
+      await UserAPI.addCartCar(this.id)
       Toast.show('Car added to Cart')
     }catch(err){
       Toast.show(err, 'error')

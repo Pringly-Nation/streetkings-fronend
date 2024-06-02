@@ -38,13 +38,14 @@ class GarageView {
         <div id="dark" class="lights"></div>
         
         <img class="garagelight" src="./images/garage/garagelight.png" >
+        <img class="background" src="./images/background.png">
 
         <div class="cars-grid">
           ${this.favCars == null ? html`
           <sl-spinner></sl-spinner>
           ` : html`
           ${this.favCars.map(car => html`
-            <va-car class="car-card"
+            <va-garagecar class="car-card"
                 name="${car.name}"
                 id="${car._id}"
                 price="${car.price}"
@@ -53,8 +54,7 @@ class GarageView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-              </va-car>
-              <img class="background" src="./images/background.png">
+              </va-garagecar>
           `)}
         `}
         

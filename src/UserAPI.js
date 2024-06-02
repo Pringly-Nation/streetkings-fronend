@@ -100,7 +100,7 @@ class UserAPI {
   
   }
  
-  async addCartCars(carId){
+  async addCartCar(carId){
     // validate
     if(!carId) return
   
@@ -133,7 +133,7 @@ class UserAPI {
   
     // fetch the json data
     const response = await fetch(`${App.apiBase}/user/removeGarageCar`, {
-      method: "DELETE",
+      method: "PUT",
       headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
       body: JSON.stringify({carId: carId})
     })
@@ -144,7 +144,33 @@ class UserAPI {
       const err = await response.json()
       if(err) console.log(err)
       // throw error (exit this function)      
-      throw new Error('Problem removing car to cart')
+      throw new Error('Problem removing car from garage')
+    }
+    
+    // convert response payload into json - store as data
+    const data = await response.json()
+    
+    // return data
+    return data
+  }
+  async removeCartCar(carId){
+    // validate
+    if(!carId) return
+  
+    // fetch the json data
+    const response = await fetch(`${App.apiBase}/user/removeCartCar`, {
+      method: "PUT",
+      headers: { "Authorization": `Bearer ${localStorage.accessToken}`, "Content-Type": 'application/json'},
+      body: JSON.stringify({carId: carId})
+    })
+  
+    // if response not ok
+    if(!response.ok){ 
+      // console log error
+      const err = await response.json()
+      if(err) console.log(err)
+      // throw error (exit this function)      
+      throw new Error('Problem removing car from cart')
     }
     
     // convert response payload into json - store as data
