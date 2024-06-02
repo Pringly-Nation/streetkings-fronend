@@ -65,9 +65,9 @@ customElements.define('va-garagecar', class Cars extends LitElement {
         }
     </style>
     <sl-card class="car-card">
-        <img slot="image" src="${App.apiBase}/images/${this.image}" />
-        <h3>${this.name}</h3>
-        <sl-icon-button name="x-lg" label="Remove From Garage" @click=${this.removeGarageCarHandler.bind(this)}></sl-icon-button>
+      <sl-icon-button name="x-lg" label="Remove From Garage" @click=${this.removeGarageCarHandler.bind(this)}></sl-icon-button>
+      <img slot="image" src="${App.apiBase}/images/${this.image}" />
+      <h3>${this.name}</h3>
     </sl-card>
     `
   }

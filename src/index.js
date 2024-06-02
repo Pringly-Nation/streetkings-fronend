@@ -10,7 +10,7 @@ setBasePath('/')
 import './components/va-app-header'
 import './components/va-car'
 import './components/va-garagecar.js'
-import './components/va-cart.js'
+import './components/va-cartcar.js'
 
 // styles
 import './scss/master.scss'

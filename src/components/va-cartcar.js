@@ -5,7 +5,7 @@ import App from './../App'
 import UserAPI from './../UserAPI'
 import Toast from './../Toast'
 
-customElements.define('va-cart', class Cars extends LitElement {
+customElements.define('va-cartcar', class Cars extends LitElement {
   constructor(){
     super()    
   }
@@ -44,7 +44,6 @@ customElements.define('va-cart', class Cars extends LitElement {
       try {
         await UserAPI.removeCartCar(this.id)
         Toast.show('Car removed from cart')
-        this.render()
       }catch(err){
         Toast.show(err, 'error')
       }
@@ -66,12 +65,12 @@ customElements.define('va-cart', class Cars extends LitElement {
         }
     </style>
     <sl-card class="car-card">
-        <img slot="image" src="${App.apiBase}/images/${this.image}" />
-        <h3>${this.name}</h3>
-        <h3>$${this.price}</h3>
-        <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
-        <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
-        <sl-icon-button name="x-lg" label="Remove From Cart" @click=${this.removeCartCarHandler.bind(this)}></sl-icon-button>
+      <sl-icon-button name="x-lg" label="Remove From Cart" @click=${this.removeCartCarHandler.bind(this)}></sl-icon-button>
+      <img slot="image" src="${App.apiBase}/images/${this.image}" />
+      <h3>${this.name}</h3>
+      <h3>$${this.price}</h3>
+      <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
+      <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
     </sl-card>
     `
   }

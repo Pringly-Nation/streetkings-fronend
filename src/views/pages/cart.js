@@ -25,6 +25,9 @@ class CartView {
       Toast.show(err, 'error')
     }
   }
+  checkOutHandler(){
+    Toast.show('Congratulations on your purchase!')
+  }
 
   render(){
     const template = html`
@@ -33,9 +36,9 @@ class CartView {
         <div class="cars-grid">
           ${this.cartedCars == null ? html`
           <sl-spinner></sl-spinner>
-          ` : html`
+          ` : html`   
           ${this.cartedCars.map(car => html`
-            <va-cart class="car-card"
+            <va-cartcar class="car-card"
                 name="${car.name}"
                 id="${car._id}"
                 price="${car.price}"
@@ -44,9 +47,14 @@ class CartView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-              </va-cart>`)}`}
-      </div>      
-    `
+              </va-cartcar>
+              <sl-button class="checkoutBtn"  @click=${this.checkOutHandler.bind(this)}>Check Out</sl-button> 
+              `)}
+            `}
+              
+          </div> 
+           
+          `
     render(template, App.rootEl)
   }
 }
