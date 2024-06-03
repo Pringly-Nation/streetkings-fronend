@@ -64,6 +64,7 @@ a {
 // helper classes ---------
 .calign {
   text-align: center;
+  margin-top: 20px;
 }
 
 .large-text {
@@ -113,6 +114,10 @@ a {
   justify-content: center;
 }
 
+.page-form{
+  margin: auto;
+}
+
 // sign in + sign up pages ----------
 .signinup-box,
 .signup-box {  
@@ -141,7 +146,7 @@ a {
   flex-wrap: wrap;
   margin-top: 20px;
   .car-card{
-    width: 33.3%;
+    width: 32%;
     margin: 0.5em;
     color: white;
     background-color: black;
@@ -248,11 +253,10 @@ a {
   opacity: 0.8;
 }
 
-//car stats page ------------------------
-.page-form{
-  margin: auto;
-  text-align: center;
-  padding-top: 40px;
+//cart page ----------------------------
+.checkoutBtn{
+  margin: 0.5em;
+
 }
 
 //garage page ------------------
@@ -346,3 +350,5 @@ a {
   position: relative;
   z-index: 0;
 }
+
+//profile page ----------------------------

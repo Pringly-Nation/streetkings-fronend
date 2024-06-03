@@ -46,8 +46,7 @@ class newCarView {
   render(){
     const template = html`
       <va-app-header title="New Car" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
-      <div class="page-content">        
-        <h1>New Car</h1>
+      <div class="page-content calign">        
         <form class="page-form" @submit=${this.newCarSubmitHandler}> <!------form to add cars into the database------>
           <input type="hidden" name="user" value="${Auth.currentUser._id}" />
           <div class="input-group">

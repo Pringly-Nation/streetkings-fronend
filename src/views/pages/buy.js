@@ -65,10 +65,10 @@ class BuyView {
     this.filterCars(field, match)
   }
 
-    clearFilters(){
-      this.getCars()
-      this.clearFilterBtns()
-    }
+  clearFilters(){
+    this.getCars()
+    this.clearFilterBtns()
+  }
 
   async getCars(){
     try{

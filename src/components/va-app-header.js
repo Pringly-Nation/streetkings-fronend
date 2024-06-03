@@ -117,7 +117,10 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         color: #fff;
       }
 
-
+      .app-side-menu::part(panel){
+        background-color: black;
+      }
+      
       .app-side-menu-items{
         margin-top: 1em;
         a {
@@ -125,7 +128,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         padding: .5em;
         text-decoration: none;
         font-size: 1.3em;
-        color: #333;
+        color: white;
       }
       }
 
