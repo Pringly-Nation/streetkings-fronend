@@ -306,7 +306,7 @@ a {
   left: 0;
   overflow: hidden;
   z-index: 3;
-  animation: garage-zoom 0.5s 2s;
+  animation: garage-zoom 0.5s 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -321,9 +321,10 @@ a {
   position: absolute;
   animation: garage-open;
   animation-delay: 0.5s;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: 0.5s;
 }
 
 @keyframes garage-open{

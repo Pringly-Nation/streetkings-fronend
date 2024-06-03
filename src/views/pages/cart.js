@@ -48,12 +48,12 @@ class CartView {
                 mileage="${car.mileage}"
               >        
               </va-cartcar>
-              <sl-button class="checkoutBtn"  @click=${this.checkOutHandler.bind(this)}>Check Out</sl-button> 
+              
               `)}
-            `}
+            `} 
               
           </div> 
-           
+          <sl-button class="checkoutBtn"  @click=${this.checkOutHandler.bind(this)}>Check Out</sl-button> 
           `
     render(template, App.rootEl)
   }

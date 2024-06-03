@@ -70,7 +70,6 @@ customElements.define('va-cartcar', class Cars extends LitElement {
       <h3>${this.name}</h3>
       <h3>$${this.price}</h3>
       <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
-      <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
     </sl-card>
     `
   }

@@ -81,7 +81,7 @@ customElements.define('va-car', class Cars extends LitElement {
                 <h1>${this.name}</h1>
                 <p class="colour">${this.colour}</p>
                 <p class="price">$${this.price}</p>
-                <p class="mileage">Mileage: <span>${this.mileage}</span></p>
+                <p class="mileage">Mileage: <span>${this.mileage} km</span></p>
 
                 <sl-button @click=${this.addFavHandler.bind(this)}>
                 <sl-icon slot="prefix" name="car-front"></sl-icon>
