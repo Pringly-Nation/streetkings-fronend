@@ -41,6 +41,15 @@ customElements.define('va-cartcar', class Cars extends LitElement {
     super.firstUpdated()
   }
 
+  async removeCartCarHandler(){ //function to remove cars from the cart
+    try {
+      await UserAPI.removeCartCar(this.id)
+      Toast.show('Car removed from cart')
+    }catch(err){
+      Toast.show(err, 'error')
+    }
+  }
+
   
   render(){    
     return html`
@@ -58,7 +67,7 @@ customElements.define('va-cartcar', class Cars extends LitElement {
         }
     </style>
     <sl-card class="car-card">
-      <sl-icon-button name="x-lg" label="Remove From Cart" @click=${cart.removeCartCarHandler.bind(this)}></sl-icon-button>
+      <sl-icon-button name="x-lg" label="Remove From Cart" @click=${this.removeCartCarHandler.bind(this)}></sl-icon-button>
       <img slot="image" src="${App.apiBase}/images/${this.image}" />
       <h3>${this.name}</h3>
       <h3>$${this.price}</h3>

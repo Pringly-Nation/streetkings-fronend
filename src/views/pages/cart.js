@@ -30,18 +30,6 @@ class CartView {
     Toast.show('Congratulations on your purchase!')
   }
 
-  async removeCartCarHandler(){ //function to remove cars from the cart
-    try {
-      await UserAPI.removeCartCar(this.id)
-      Toast.show('Car removed from cart')
-      this.cartedCars = await this.getCartCars()
-      const currentUser = await UserAPI.getUser(Auth.currentUser._id)
-      this.cartedCars = currentUser.cartCars
-      this.render()
-    }catch(err){
-      Toast.show(err, 'error')
-    }
-  }
 
   render(){
     const template = html`
@@ -57,7 +45,6 @@ class CartView {
                 id="${car._id}"
                 price="${car.price}"
                 colour="${car.colour}"
-                user="${JSON.stringify(car.user)}"
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
