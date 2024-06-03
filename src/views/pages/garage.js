@@ -30,12 +30,12 @@ class GarageView {
     const template = html`
       <va-app-header title="Garage" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">   
-        <div class="garage-animation">     
+        <div class="garage-animation">     <!------garage animation for the doors to go up and the garage walls to disappear------>
           <img class="garage-doors" src="./images/garage/garage-doors.png">
           <img class="garage-moving" src="./images/garage/garage-moving.png">
         </div>
-        <button @click=${turnOnLights} class="lightswitch"></button>
-        <div id="dark" class="lights"></div>
+        <button @click=${turnOnLights} class="lightswitch"></button> <!------button to turn on the lights in the garage------>
+        <div id="dark" class="lights"></div> <!------darkness which disappears to "turn on" the lights------>
         
         <img class="garagelight" src="./images/garage/garagelight.png" >
         <img class="background" src="./images/background.png">
@@ -65,7 +65,7 @@ class GarageView {
   }
 }
 
-function turnOnLights() {
+function turnOnLights() { //function to turn on the lights, toggles off class onto id = dark
   var darkelement = document.querySelector("#dark");
   darkelement.classList.toggle("off");
 }

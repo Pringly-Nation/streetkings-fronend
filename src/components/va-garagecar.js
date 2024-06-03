@@ -40,7 +40,7 @@ customElements.define('va-garagecar', class Cars extends LitElement {
     super.firstUpdated()
   }
 
-  async removeGarageCarHandler(){    //how to add favourites button
+  async removeGarageCarHandler(){ //function to remove cars from the garage
     try {
       await UserAPI.removeGarageCar(this.id)
       Toast.show('Car removed from Garage')

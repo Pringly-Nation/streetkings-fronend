@@ -14,14 +14,14 @@ class newCarView {
     Utils.pageIntroAnim()
   }
 
-  async newCarSubmitHandler(e){
+  async newCarSubmitHandler(e){ 
     e.preventDefault()
     const submitBtn = document.querySelector('.submit-btn')
     submitBtn.setAttribute('loading', '')    
     const formData = new FormData(e.target)
 
     try{
-      await CarAPI.newCar(formData)
+      await CarAPI.newCar(formData) 
       Toast.show('Car Added!')
       submitBtn.removeAttribute('loading', '') 
       //reset form
@@ -48,7 +48,7 @@ class newCarView {
       <va-app-header title="New Car" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
         <h1>New Car</h1>
-        <form class="page-form" @submit=${this.newCarSubmitHandler}>
+        <form class="page-form" @submit=${this.newCarSubmitHandler}> <!------form to add cars into the database------>
           <input type="hidden" name="user" value="${Auth.currentUser._id}" />
           <div class="input-group">
             <sl-input name="name" type="text" placeholder="Car Name" required></sl-input>

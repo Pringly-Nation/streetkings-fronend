@@ -40,7 +40,7 @@ customElements.define('va-car', class Cars extends LitElement {
     super.firstUpdated()
   }
 
-   async moreInfoHandler(){ // very important in adding the more information page in garage
+   async moreInfoHandler(){ // more information function for the cars to pop up with more information
     //new sl-dialog
     const dialogEl = document.createElement('sl-dialog')
     //add class name
@@ -100,7 +100,7 @@ customElements.define('va-car', class Cars extends LitElement {
     })
   }
 
-  async addFavHandler(){    //how to add favourites button
+  async addFavHandler(){    //how to add cars into the garage
     try {
       await UserAPI.addFavCar(this.id)
       Toast.show('Car added to Garage')
@@ -109,7 +109,7 @@ customElements.define('va-car', class Cars extends LitElement {
     }
   }
 
-  async addCartHandler(){    //how to add favourites button
+  async addCartHandler(){    //how to add cars into the cart
     try {
       await UserAPI.addCartCar(this.id)
       Toast.show('Car added to Cart')
@@ -118,7 +118,7 @@ customElements.define('va-car', class Cars extends LitElement {
     }
   }
   
-  render(){    
+  render(){   
     return html`
     <style>
         .author{

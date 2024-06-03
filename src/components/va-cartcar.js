@@ -40,7 +40,7 @@ customElements.define('va-cartcar', class Cars extends LitElement {
     super.firstUpdated()
   }
 
-  async removeCartCarHandler(){
+  async removeCartCarHandler(){ //function to remove cars from the cart
       try {
         await UserAPI.removeCartCar(this.id)
         Toast.show('Car removed from cart')

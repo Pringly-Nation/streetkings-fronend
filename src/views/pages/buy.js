@@ -103,7 +103,7 @@ class BuyView {
       <div class="page-content">        
         <h1>Spotlight Cars</h1>
         
-        <div class="filter-menu">
+        <div class="filter-menu"> <!------filtering system for the cars------>
           <div>
           Filter By
           </div>  
@@ -130,7 +130,7 @@ class BuyView {
           </div>  
         </div>
        
-          <div class="cars-grid">
+          <div class="cars-grid"><!------grid for the cars to populate into------>
           ${this.cars == null ? html`
             <sl-spinner></sl-spinner>
             `:html`

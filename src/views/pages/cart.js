@@ -25,7 +25,7 @@ class CartView {
       Toast.show(err, 'error')
     }
   }
-  checkOutHandler(){
+  checkOutHandler(){ // function to confirm purchase
     Toast.show('Congratulations on your purchase!')
   }
 
@@ -54,6 +54,7 @@ class CartView {
               
           </div> 
           <sl-button class="checkoutBtn"  @click=${this.checkOutHandler.bind(this)}>Check Out</sl-button> 
+          <!------check out button for feedback.------>
           `
     render(template, App.rootEl)
   }
