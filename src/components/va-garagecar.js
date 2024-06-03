@@ -40,6 +40,14 @@ customElements.define('va-garagecar', class Cars extends LitElement {
     super.firstUpdated()
   }
 
+  async removeGarageCarHandler(){    //how to add favourites button
+    try {
+      await UserAPI.removeGarageCar(this.id)
+      Toast.show('Car removed from Garage')
+    }catch(err){
+      Toast.show(err, 'error')
+    }
+  }
   render(){    
     return html`
     <style>
@@ -56,6 +64,7 @@ customElements.define('va-garagecar', class Cars extends LitElement {
         }
     </style>
     <sl-card class="car-card">
+    <sl-icon-button class="removebtn" name="x-lg" label="Remove From Garage" @click=${this.removeGarageCarHandler.bind(this)}></sl-icon-button>  
       <img slot="image" src="${App.apiBase}/images/${this.image}" />
       <h3>${this.name}</h3>
     </sl-card>

@@ -26,17 +26,6 @@ class GarageView {
     }
   }
 
-  async removeGarageCarHandler(){    //how to add favourites button
-    try {
-      await UserAPI.removeGarageCar(this.id)
-      Toast.show('Car removed from Garage')
-      this.favCars = await UserAPI.getUser(Auth.currentUser._id)
-      this.render()
-    }catch(err){
-      Toast.show(err, 'error')
-    }
-  }
-
   render(){
     const template = html`
       <va-app-header title="Garage" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
@@ -65,7 +54,6 @@ class GarageView {
                 image="${car.image}"
                 mileage="${car.mileage}"
               >        
-              <sl-icon-button name="x-lg" label="Remove From Garage" @click=${this.removeGarageCarHandler.bind(this)}></sl-icon-button>  
               </va-garagecar>
           `)}
         `}
