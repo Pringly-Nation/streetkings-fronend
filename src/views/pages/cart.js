@@ -25,8 +25,22 @@ class CartView {
       Toast.show(err, 'error')
     }
   }
+
   checkOutHandler(){ // function to confirm purchase
     Toast.show('Congratulations on your purchase!')
+  }
+
+  async removeCartCarHandler(){ //function to remove cars from the cart
+    try {
+      await UserAPI.removeCartCar(this.id)
+      Toast.show('Car removed from cart')
+      this.cartedCars = await this.getCartCars()
+      const currentUser = await UserAPI.getUser(Auth.currentUser._id)
+      this.cartedCars = currentUser.cartCars
+      this.render()
+    }catch(err){
+      Toast.show(err, 'error')
+    }
   }
 
   render(){

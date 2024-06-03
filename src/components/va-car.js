@@ -132,15 +132,25 @@ customElements.define('va-car', class Cars extends LitElement {
         .car-card::part(base){
           background-color: black;
         }
+        .addtobtn{
+          font-size: 35px;
+          margin-left: 0.5em;
+          color: white;
+        }
+        .morebtns{
+          display:flex
+        }
     </style>
     <sl-card class="car-card">
         <img slot="image" src="${App.apiBase}/images/${this.image}" />
         <h3>${this.name}</h3>
         <h3>$${this.price}</h3>
         <p class="author">By ${this.user.firstName} ${this.user.lastName}</p>
-        <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
-        <sl-icon-button name="car-front" label="Add to Garage" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
-        <sl-icon-button name="cart2" label="Add to Cart" @click=${this.addCartHandler.bind(this)}></sl-icon-button>
+        <div class="morebtns">
+          <sl-button @click=${this.moreInfoHandler}>More Info</sl-button>
+          <sl-icon-button class="addtobtn" name="car-front" label="Add to Garage" @click=${this.addFavHandler.bind(this)}></sl-icon-button>
+          <sl-icon-button class="addtobtn" name="cart2" label="Add to Cart" @click=${this.addCartHandler.bind(this)}></sl-icon-button>
+        </div>
     </sl-card>
     `
   }
